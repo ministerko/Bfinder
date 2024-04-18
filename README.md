@@ -1,5 +1,5 @@
 # Bfinder
-[bapp.png](https://i.postimg.cc/nhg2Prx5/bapp.png)
+[bapp.png](https://github.com/ministerko/Bfinder/blob/main/bapp.png)
 
 
 Bfinder is a bug and vulnerabilities scanner application.
