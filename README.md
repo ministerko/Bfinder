@@ -8,8 +8,7 @@ Bfinder is a bug and vulnerabilities scanner application.
 
 You can install Bfinder using pip:
 
-\`\`\`bash
-pip install Bfinder
+\`\`\`Use "$git clone <repository>" to dowload source code
 \`\`\`
 
 ## Usage
@@ -17,7 +16,7 @@ pip install Bfinder
 After installation, you can run Bfinder from the command line using the \`do.py\` script:
 
 \`\`\`bash
-python do.py
+$python do.py
 \`\`\`
 
 ## Contributing
