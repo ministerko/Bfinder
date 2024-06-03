@@ -8,8 +8,8 @@ Bfinder is a bug and vulnerabilities scanner application.
 
 You can install Bfinder using pip:
 
-\`\`\`Use "$git clone <repository>" to dowload source code
-\`\`\`
+```bash #Use $git clone <repository> to dowload source code
+```
 
 ## Usage
 
