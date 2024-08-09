@@ -1,0 +1,4 @@
+PyQt5
+PyPDF2
+keyring
+xhtml2pdf

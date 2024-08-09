@@ -327,7 +327,7 @@ class Ui_Bfinder(object):
             self.bug_report_data = self.scan_directory(directory_path)  # Store bug report data
             self.display_bug_report(self.bug_report_data)  # Display bug report
 
-    from sec_tip import get_random_security_tips
+    from functions.sec_tip import get_random_security_tips
     def display_security_tips(self):
      security_tips = self.get_random_security_tips()  # Get random security tips
      layout = QtWidgets.QVBoxLayout(self.scrollAreaWidgetContents_2)  # Use QVBoxLayout for the layout
@@ -389,9 +389,9 @@ class Ui_Bfinder(object):
 
             
     #scan files
-    from bug_exp import scan_html_file
-    from bug_exp import scan_js_file
-    from bug_exp import get_bug_explanation
+    from functions.bug_exp import scan_html_file
+    from functions.bug_exp import scan_js_file
+    from functions.bug_exp import get_bug_explanation
   
   
    
