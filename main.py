@@ -12,7 +12,7 @@ class LoginDialog(QDialog):
     def __init__(self):
         super().__init__()
         self.setWindowTitle("Login")
-        icon = QtGui.QIcon("icon.png")
+        icon = QtGui.QIcon("images/icon.png")
         self.setWindowIcon(icon)
         self.setFixedSize(300, 150) 
 
@@ -34,7 +34,7 @@ class LoginDialog(QDialog):
 
     def check_password(self):
         entered_password = self.password_input.text()
-        system_password = keyring.get_password("system", "user")  # Retrieve system password from keyring
+        system_password = "1234"
         if entered_password == system_password:
             self.accept()
         else:
@@ -69,7 +69,7 @@ class Ui_Bfinder(object):
         self.label_2.setGeometry(QtCore.QRect(80, 20, 91, 81))
         self.label_2.setStyleSheet("background:transparent;")
         self.label_2.setText("")
-        self.label_2.setPixmap(QtGui.QPixmap("logo.png"))
+        self.label_2.setPixmap(QtGui.QPixmap("images/logo.png"))
         self.label_2.setScaledContents(True)
         self.label_2.setOpenExternalLinks(True)
         self.label_2.setObjectName("label_2")
@@ -105,7 +105,7 @@ class Ui_Bfinder(object):
         self.label_4.setGeometry(QtCore.QRect(150, 30, 31, 31))
         self.label_4.setStyleSheet("background:transparent;")
         self.label_4.setText("")
-        self.label_4.setPixmap(QtGui.QPixmap("change.png"))
+        self.label_4.setPixmap(QtGui.QPixmap("chimages/ange.png"))
         self.label_4.setScaledContents(True)
         self.label_4.setObjectName("label_4")
         
@@ -218,7 +218,7 @@ class Ui_Bfinder(object):
         self.label_6.setGeometry(QtCore.QRect(150, 30, 31, 31))
         self.label_6.setStyleSheet("background:transparent;")
         self.label_6.setText("")
-        self.label_6.setPixmap(QtGui.QPixmap("doc.png"))
+        self.label_6.setPixmap(QtGui.QPixmap("images/doc.png"))
         self.label_6.setScaledContents(True)
         self.label_6.setObjectName("label_6")
 
@@ -244,7 +244,7 @@ class Ui_Bfinder(object):
         self.label_8.setGeometry(QtCore.QRect(160, 30, 31, 31))
         self.label_8.setStyleSheet("background:transparent;")
         self.label_8.setText("")
-        self.label_8.setPixmap(QtGui.QPixmap("con.png"))
+        self.label_8.setPixmap(QtGui.QPixmap("images/con.png"))
         self.label_8.setScaledContents(True)
         self.label_8.setObjectName("label_8")
 
@@ -253,7 +253,7 @@ class Ui_Bfinder(object):
         self.label_9.setGeometry(QtCore.QRect(330, -160, 631, 601))
         self.label_9.setStyleSheet("background:none;")
         self.label_9.setText("")
-        self.label_9.setPixmap(QtGui.QPixmap("ba.png"))
+        self.label_9.setPixmap(QtGui.QPixmap("images/ba.png"))
         self.label_9.setScaledContents(True)
         self.label_9.setObjectName("label_9")
 
@@ -262,7 +262,7 @@ class Ui_Bfinder(object):
         self.label_10.setGeometry(QtCore.QRect(590, 110, 631, 601))
         self.label_10.setStyleSheet("background:none;")
         self.label_10.setText("")
-        self.label_10.setPixmap(QtGui.QPixmap("ba.png"))
+        self.label_10.setPixmap(QtGui.QPixmap("images/ba.png"))
         self.label_10.setScaledContents(True)
         self.label_10.setObjectName("label_10")
 
@@ -403,10 +403,10 @@ class Ui_Bfinder(object):
         output_pdf = f"{directory_name}_report.pdf"
 
         # Create HTML content for the header
-        header_html = f"""
+        header_html = """
          <div style=" display: flex;">
            
-            <img src="pro.png" width="100" height="100"/>
+            <img src=images/"pro.png" width="100" height="100"/>
          </div>
 
 
@@ -415,7 +415,7 @@ class Ui_Bfinder(object):
 
         # Create HTML content for the table
         table_html = """
-        <table style="border-collapse: collapse; width: 100% ; border: 1px solid black;     background-image: url('ba.png');
+        <table style="border-collapse: collapse; width: 100% ; border: 1px solid black;     background-image: urlimages/('ba.png');
            background-size: cover;">
             <tr style="background-color: grey; color: whitesmoke; text-align: center; font-weight: bold;">
                 <th style=" padding:8px;">Bug Type</th>
@@ -456,7 +456,7 @@ class Ui_Bfinder(object):
     def truncate_text(self, text, max_words):
         words = text.split()
         if len(words) > max_words:
-            num_lines = len(words) // max_words + 1
+            len(words) // max_words + 1
             lines = [" ".join(words[i:i+max_words]) for i in range(0, len(words), max_words)]
             return "<br>".join(lines)
         else:
@@ -486,7 +486,7 @@ if __name__ == "__main__":
     ui = Ui_Bfinder()
     ui.setupUi(Bfinder)
     Bfinder.setFixedSize(Bfinder.size())
-    icon = QtGui.QIcon("icon.png")
+    icon = QtGui.QIcon("images/icon.png")
     Bfinder.setWindowIcon(icon)
     Bfinder.show()
     sys.exit(app.exec_())
